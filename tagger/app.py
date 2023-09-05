@@ -22,7 +22,7 @@ model = DetrForObjectDetection.from_pretrained(model_name_or_path)
 
 
 def get_auth_token(email, password):
-    url = client.build_url(f"/api/admins/auth-with-password")
+    url = client.build_url("/api/admins/auth-with-password")
 
     req = requests.post(url, json={"identity": email, "password": password})
 
